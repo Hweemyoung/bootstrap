@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Deactivate zoom in mobile device -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> -->
+    <style></style>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <!-- Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css"
+        integrity="sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt" crossorigin="anonymous">
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/js/bootstrap.min.js"
+        integrity="sha384-3qaqj0lc6sV/qpzrc1N5DC6i1VRn/HyX4qdPaiEFbn54VjQBEU341pvjz7Dv3n6P"
+        crossorigin="anonymous"></script>
+    <script>
+        function closeAlert() {
+            $('#test-alert').alert("close");
+        };
+        $(function (){
+            $("#test-alert").on("close.bs.alert", function(){
+                alert("close.bs.alert");
+            });
+            $("#test-alert").on("closed.bs.alert", function(){
+                alert("closed.bs.alert");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="alert alert-success">
+            <strong>success
+            </strong>success alert.
+
+        </div>
+        <div class="alert alert-info">
+            <strong>info
+            </strong>info alert.
+        </div>
+        <div class="alert alert-warning">
+            <strong>warning
+            </strong>warning alert.
+        </div>
+        <div class="alert alert-danger">
+            <strong>danger
+            </strong>danger alert.
+        </div>
+        <div class="alert alert-primary">
+            <strong>primary
+            </strong>primary alert.
+        </div>
+        <div class="alert alert-secondary">
+            <strong>secondary
+            </strong>secondary alert.
+        </div>
+        <div class="alert alert-light">
+            <strong>light
+            </strong>light alert.
+        </div>
+        <div class="alert alert-dark">
+            <strong>dark
+            </strong>dark alert.
+        </div>
+        <div class="alert alert-success">
+            <strong>link
+            </strong><a href="#" class="alert-link">alert-link. Same style as 'strong'.</a>
+        </div>
+        <hr>
+        <h1>div.alert.alert-dismissible</h1>
+        <p>
+            div.alert.alert-dismissable > button.close[type="button" data-dissmissable="alert"]{&times;}
+        </p>
+        <div class="alert alert-secondary alert-dismissible fade show" id="test-alert">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <strong>secondary
+            </strong>secondary alert.
+        </div>
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <button type="button" onclick="closeAlert()">close Alert</button>
+    </div>
+</body>
+
+</html>
