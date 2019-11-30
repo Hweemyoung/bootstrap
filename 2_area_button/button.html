@@ -62,6 +62,36 @@
             <button class="btn btn-outline-light" type="button">btn-light</button><br>
             <button class="btn btn-outline-link" type="button">btn-link</button><br>
         </div>
+        <div class="jumbotron bg-dark text-light">
+            <h1>button.btn.btn-size[type="button"]</h1>
+            <p>Button size</p>
+            <button class="btn btn-lg btn-primary" type="button">.btn-lg</button>
+            <button class="btn btn-primary" type="button">default</button>
+            <button class="btn btn-sm btn-primary" type="button">.btn-sm</button><br><br>
+            <div class="row">
+                <div class="col-sm-6"><button class="btn btn-block btn-success" type="button">.btn-block</button></div>
+                <div class="col-sm-6"><button class="btn btn-block btn-danger" type="button">.btn-block</button></div>
+            </div><br>
+            <button class="btn btn-block btn-primary" type="button">.btn-block</button>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <div class="jumbotron bg-secondary">
+                    <button class="btn btn-primary active" type="button" onclick="alert('active')">.active</button>
+                    <button class="btn btn-primary" type="button" disabled="disabled"
+                        onclick="alert('disabled')">[disabled="disabled"]</button>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="jumbotron bg-danger"></div>
+            </div>
+        </div>
+        <div class="jumbotron bg-warning">
+            <button class="btn btn-primary active" type="button" onclick="alert('active')">.active</button>
+            <button class="btn btn-primary" type="button" disabled="disabled"
+                onclick="alert('disabled')">[disabled="disabled"]</button>
+            <a href="#" class="btn btn-primary disabled">a.disabled</a>
+        </div>
     </div>
 </body>
 
