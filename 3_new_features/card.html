@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Deactivate zoom in mobile device -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> -->
+    <style></style>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <!-- Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css"
+        integrity="sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt" crossorigin="anonymous">
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/js/bootstrap.min.js"
+        integrity="sha384-3qaqj0lc6sV/qpzrc1N5DC6i1VRn/HyX4qdPaiEFbn54VjQBEU341pvjz7Dv3n6P"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h3>
+            .card>.card-header+.card-body+.card-footer
+        </h3>
+        <div class="card">
+            <div class="card-header">card-header</div>
+            <div class="card-body">card-body</div>
+            <div class="card-footer">card-footer</div>
+        </div>
+        <hr>
+        <div class="card div-colored-card">
+            <div class="card-body">default</div>
+        </div>
+        <hr>
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Card Title</h4>
+                <p class="card-text">Card Text</p>
+                <a href="" class="card-link">link 1</a><a href="" class="card-link">link 2</a>
+            </div>
+        </div>
+        <div class="card" style="width: 100px">
+            <img src="./img/account-logout-8x.png" style="width: 100%;" alt="" class="card-img-top">
+            <div class="card-body">
+                <h4 class="card-title">card-title</h4>
+                <p class="card-text">card-text</p>
+                <a href="#" class="btn btn-primary">more</a>
+            </div>
+        </div>
+        <hr>
+        <div class="card" style="width: 100px">
+            <div class="card-body">
+                <h4 class="card-title">card-title</h4>
+                <p class="card-text">card-text</p>
+                <a href="#" class="btn btn-primary">more</a>
+            </div>
+            <img src="./img/arrow-circle-bottom-8x.png" style="width: 100%;" alt="" class="card-img-bottom">
+        </div>
+        <hr>
+        <div class="card" style="width: 100px">
+            <div class="card-img-overlay">
+                <h4 class="card-title">card-title</h4>
+                <p class="card-text">card-text</p>
+                <a href="#" class="btn btn-primary">more</a>
+            </div>
+            <img src="./img/arrow-circle-bottom-8x.png" style="width: 100%;" alt="" class="card-img-bottom">
+        </div>
+        <hr>
+        <h3>
+            .card-deck>(.card)*#
+        </h3>
+        <div class="card-deck">
+        </div>
+        <h3>.card-columns>(.card>.card-body)*#</h3>
+        <div class="card column-test">
+            <div class="card-body text-center">
+                <p>card 0</p>
+            </div>
+        </div>
+        <hr>
+        <h3>
+            .card-group>(.card)*#
+        </h3>
+        <div class="card-group"></div>
+    </div>
+    <p id="lorem">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci itaque, ab ipsam ullam excepturi amet.
+        Necessitatibus consequatur quod perferendis aliquam hic, debitis, dolorem neque ex, fugiat ea praesentium nemo
+        adipisci!
+    </p>
+    <script>
+        const colors = ['primary', 'secondary', 'info', 'success', 'warning', 'danger', 'light', 'dark'];
+        const default_card = $('.div-colored-card'); // $
+        const default_card_next = default_card.next();
+        $(colors).map(function () {
+            var card = default_card.clone();
+            card.addClass('bg-' + this);
+            if (card.hasClass('bg-dark')) {
+                card.addClass('text-light');
+            };
+            card.children('.card-body').html('bg-' + this);
+            default_card_next.before(card);
+        })
+        const column_test = $('.column-test');
+        $(colors).map(function (index) {
+            var card = column_test.clone();
+            card.addClass('bg-' + this);
+            if (card.hasClass('bg-dark')) {
+                card.addClass('text-light');
+            };
+            card.children().html('<p>card ' + (index + 1) + '</p>')
+            column_test.after(card);
+        })
+        var card_column = $(document.createElement('div'));
+        card_column.addClass('card-columns');
+        $('.container').append(card_column);
+        $('.column-test').appendTo(card_column);
+
+        $('.card-deck').append($('.div-colored-card').clone())
+        $($('.card-deck .div-colored-card .card-body')[0]).html('');
+        $($('.card-deck .div-colored-card .card-body')[0]).append(document.getElementById('lorem'))
+
+        $('.card-group').append($('.div-colored-card').clone())
+    </script>
+</body>
+
+</html>
