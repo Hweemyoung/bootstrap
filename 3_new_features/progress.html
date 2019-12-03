@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Deactivate zoom in mobile device -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> -->
+    <style></style>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <!-- Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css"
+        integrity="sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt" crossorigin="anonymous">
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/js/bootstrap.min.js"
+        integrity="sha384-3qaqj0lc6sV/qpzrc1N5DC6i1VRn/HyX4qdPaiEFbn54VjQBEU341pvjz7Dv3n6P"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+    </div>
+    <script>
+        const colors = ['primary', 'secondary', 'info', 'success', 'warning', 'danger', 'light', 'dark', 'white'];
+        const hr = document.createElement('hr');
+
+        for(var i=0; i<colors.length; i++){
+            $('.container').append(document.createElement('div'));
+        }
+        $('.container div').addClass('progress');
+        $('.container .progress').append(document.createElement('div'));
+        $('.container .progress div').addClass('progress-bar');
+        var bars = $('.container .progress .progress-bar')
+        bars.map(function(index){
+            this.className += ' bg-' + colors[index];
+            if(['light', 'white'].includes(colors[index])){
+                this.className += ' text-dark';
+            };
+            this.setAttribute('style', 'width: ' + Math.ceil((index+1) * 100 / bars.length) + '%');
+            this.innerHTML = this.getAttribute('style');
+        })
+        // striped bar
+        $('.container .progress .progress-bar')[3].classList.add('progress-bar-striped');
+        // striped bar w/ animation
+        $('.container .progress .progress-bar')[4].classList.add('progress-bar-striped');
+        $('.container .progress .progress-bar')[4].classList.add('progress-bar-animated');
+        $('body').append(hr).append($('.container').clone().attr('id', '2'));
+        
+        var bars2 = $('#2 .progress .progress-bar').clone().slice(0, 3)
+        $('#2 .progress .progress-bar').slice(0, 3).closest('.progress').remove();
+        var newprogress = document.createElement('div');
+        newprogress.classList.add('progress');
+        $('#2').prepend(newprogress);
+        bars2.map(function(){
+            console.log(this.outerHTML);
+            $('#2 .progress')[0].innerHTML += this.outerHTML;
+        })
+        
+
+        
+
+
+    </script>
+</body>
+
+</html>
