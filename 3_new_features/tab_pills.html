@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Deactivate zoom in mobile device -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> -->
+    <style></style>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <!-- Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css"
+        integrity="sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt" crossorigin="anonymous">
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/js/bootstrap.min.js"
+        integrity="sha384-3qaqj0lc6sV/qpzrc1N5DC6i1VRn/HyX4qdPaiEFbn54VjQBEU341pvjz7Dv3n6P"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h5>
+            Tab
+        </h5>
+        <p>
+            (ul.nav.nav-tab>li.nav-item>a.nav-link[href="#target" data-toggle="tab"])+.tab-content>.tab-pane#target
+        </p>
+        <ul class="nav nav-tabs">
+            <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#tab1">Tab 1</a></li>
+            <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#tab2">Tab 2</a></li>
+            <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#tab3">Tab 3</a></li>
+        </ul>
+        <div class="tab-content">
+            <div class="container tab-pane" id="tab1">
+                <h1>Tab 1</h1>
+                <p>Tab 1 contents</p>
+            </div>
+            <div class="container tab-pane active" id="tab2">
+                <h1>Tab 2</h1>
+                <p>Tab 2 contents</p>
+            </div>
+            <div class="container tab-pane" id="tab3">
+                <h1>Tab 3</h1>
+                <p>Tab 3 contents</p>
+            </div>
+        </div>
+        <hr>
+        <h5>
+            w/ animation:fade
+        </h5>
+        <p>
+            li.tab-pane.fade
+            li.tab-pane.fade.active.show
+        </p>
+        <ul class="nav nav-tabs">
+            <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#tab4">Tab 4</a></li>
+            <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#tab5">Tab 5</a></li>
+            <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#tab6">Tab 6</a></li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane fade" id="tab4">
+                <h1>Tab 4</h1>
+                <p>Tab 4 contents</p>
+            </div>
+            <div class="tab-pane fade show active" id="tab5">
+                <h1>Tab 5</h1>
+                <p>Tab 5 contents</p>
+            </div>
+            <div class="tab-pane fade" id="tab6">
+                <h1>Tab 6</h1>
+                <p>Tab 6 contents</p>
+            </div>
+        </div>
+        <hr>
+        <h5>
+            Pills
+        </h5>
+        <p>
+            ul.nav.nav-pills>(li.nav-item>a.nav-link[data-toggle="pill" href="#target"])+.tab-content>(.tab-pane#target)
+        </p>
+        <ul class="nav nav-pills">
+            <li class="nav-item"><a href="#pill1" class="nav-link active" data-toggle="pill">Pill 1</a></li>
+            <li class="nav-item"><a href="#pill2" class="nav-link" data-toggle="pill">Pill 2</a></li>
+            <li class="nav-item"><a href="#pill3" class="nav-link" data-toggle="pill">Pill 3</a></li>
+        </ul>
+        <div class="container tab-content">
+            <div class="tab-pane fade active show" id="pill1">
+                <h1>Pill 1</h1>
+                <p>Pill 1 contents</p>
+            </div>
+            <div class="tab-pane fade" id="pill2">
+                <h1>Pill 2</h1>
+                <p>Pill 2 contents</p>
+            </div>
+            <div class="tab-pane fade" id="pill3">
+                <h1>Pill 3</h1>
+                <p>Pill 3 contents</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
