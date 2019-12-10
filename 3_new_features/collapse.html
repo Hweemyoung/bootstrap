@@ -93,7 +93,7 @@
         </div>
         <hr>
         <h5>
-            #accordion>.card>.card-header+.collapse[data-parent="#accordion"]
+            #accordion>(.card>(.card-header>a.card-link[href="#card$" data-toggle="collapse"]{card-header$})+.collapse[data-parent="#accordion"]#card$>.card-body{card-body$})*##
         </h5>
         <div id="accordion">
             <div class="card">
