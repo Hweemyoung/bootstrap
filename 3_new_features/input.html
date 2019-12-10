@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Deactivate zoom in mobile device -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> -->
+    <style>
+        .container {
+            margin-top: 5rem;
+        }
+    </style>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <!-- Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css"
+        integrity="sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt" crossorigin="anonymous">
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/js/bootstrap.min.js"
+        integrity="sha384-3qaqj0lc6sV/qpzrc1N5DC6i1VRn/HyX4qdPaiEFbn54VjQBEU341pvjz7Dv3n6P"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h3>Basic form structure</h3>
+        <p>
+            form[action method]>(.form-group>label[for="target$"]{label$}+input.form-control#target$)*##
+        </p>
+        <h3>
+            form in card
+        </h3>
+        <p>
+            .card>.card-body>form
+        </p>
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-8">
+                <div class="card shadow">
+                    <div class="card-body">
+                        <form action="" method="">
+                            <div class="form-group row">
+                                <label for="target1" class="col-sm-4">ID</label>
+                                <input type="text" class="col-sm-8 form-control" id="target1"></div>
+                            <div class="form-group row">
+                                <label for="target2" class="col-sm-4">PW</label>
+                                <input type="password" class="col-sm-8 form-control" id="target2"></div>
+                            <div class="form-group row">
+                                <label for="target3" class="col-sm-4">textarea</label>
+                                <textarea name="" id="target3" rows="5" class="form-control col-sm-8"
+                                    style="resize: none"></textarea>
+                            </div>
+                            <hr>
+                            <div class="jumbotron">
+                                <h5>Checkbox</h5>
+                                <p>
+                                    .form-group>(.form-check>label.form-check-label>input.form-check-input[name="NAME"
+                                    value="NAME$" type="checkbox"]{checkbox$})*#
+                                </p>
+                                <p class="bg-warning">Not label+input, but label>input</p>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-4 text-sm-right">check box</label>
+                                <div class="col-sm-8">
+                                    <div class="form-group">
+                                        <div class="form-check"><label for="" class="form-check-label"><input
+                                                    type="checkbox" class="form-check-input" name="c1">checkbox1</label>
+                                        </div>
+                                        <div class="form-check"><label for="" class="form-check-label"><input
+                                                    type="checkbox" class="form-check-input" name="c2">checkbox2</label>
+                                        </div>
+                                        <div class="form-check"><label for="" class="form-check-label"><input
+                                                    type="checkbox" class="form-check-input" name="c3">checkbox3</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="jumbotron">
+                                <h5>Checkbox Inline</h5>
+                                <p>
+                                    .form-group>(.form-check<b>-inline</b>>label.form-check-label>input.form-check-input[name="NAME"
+                                    value="NAME$" type="checkbox"]{checkbox$})*#
+                                </p>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-4 my-auto text-sm-right">check box inline</label>
+                                <div class="col-sm-8">
+                                    <div class="form-group">
+                                        <div class="form-check-inline"><label for="" class="form-check-label"><input
+                                                    type="checkbox" class="form-check-input" name="c4">checkbox1</label>
+                                        </div>
+                                        <div class="form-check-inline"><label for="" class="form-check-label"><input
+                                                    type="checkbox" class="form-check-input" name="c5">checkbox2</label>
+                                        </div>
+                                        <div class="form-check-inline"><label for="" class="form-check-label"><input
+                                                    type="checkbox" class="form-check-input" name="c6">checkbox3</label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="form-check-inline"><label for="" class="form-check-label"><input
+                                                    type="checkbox" class="form-check-input" name="c4">checkbox1</label>
+                                        </div>
+                                        <div class="form-check-inline"><label for="" class="form-check-label"><input
+                                                    type="checkbox" class="form-check-input" name="c5">checkbox2</label>
+                                        </div>
+                                        <div class="form-check-inline"><label for="" class="form-check-label"><input
+                                                    type="checkbox" class="form-check-input" name="c6">checkbox3</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="jumbotron">
+                                <h5>Radio</h5>
+                                <p>
+                                    .form-group>(.form-check>label.form-check-label>input.form-check-input[name="NAME"
+                                    value="NAME$" type="radio"]{checkbox$})*#
+                                </p>
+                                <p class="bg-warning">Replace input[type="checkbox"] with input[type="radio"].</p>
+                                <p class="bg-warning">One radio should be checked at initialization.</p>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-4 text-sm-right">radio</label>
+                                <div class="col-sm-8">
+                                    <div class="form-group">
+                                        <div class="form-check"><label for="" class="form-check-label"><input
+                                                    type="radio" class="form-check-input" name="r1" value="1"
+                                                    checked="checked">radio1</label>
+                                        </div>
+                                        <div class="form-check"><label for="" class="form-check-label"><input
+                                                    type="radio" class="form-check-input" name="r1"
+                                                    value="2">radio2</label>
+                                        </div>
+                                        <div class="form-check"><label for="" class="form-check-label"><input
+                                                    type="radio" class="form-check-input" name="r1"
+                                                    value="3">radio3</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="jumbotron">
+                                <h5>Radio Inline</h5>
+                                <p>
+                                    .form-group>(.form-check<b>-inline</b>>label.form-check-label>input.form-check-input[name="NAME"
+                                    value="NAME$" type="radio"]{checkbox$})*#
+                                </p>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-4 text-sm-right">radio inline</label>
+                                <div class="col-sm-8">
+                                    <div class="form-group">
+                                        <div class="form-check-inline"><label for="" class="form-check-label"><input
+                                                    type="radio" class="form-check-input" name="r2" value="1"
+                                                    checked="checked">radio1</label>
+                                        </div>
+                                        <div class="form-check-inline"><label for="" class="form-check-label"><input
+                                                    type="radio" class="form-check-input" name="r2"
+                                                    value="2">radio2</label>
+                                        </div>
+                                        <div class="form-check-inline"><label for="" class="form-check-label"><input
+                                                    type="radio" class="form-check-input" name="r2"
+                                                    value="3">radio3</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="jumbotron row">
+                                <h5>
+                                    Select&Options
+                                </h5>
+                                <p>
+                                    .form-group>label[for="target"]+div>select.form-control#target[name="NAME"]>option[value="VALUE$"]*##
+                                </p>
+                            </div>
+                            <div class="form-group row">
+                                <label for="select" class="col-sm-4 text-sm-right">select</label>
+                                <div class="col-sm-8">
+                                    <select name="" id="select" class="form-control">
+                                        <option value="1">option1</option>
+                                        <option value="2">option2</option>
+                                        <option value="3">option3</option>
+                                        <option value="4">option4</option>
+                                        <option value="5">option5</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="jumbotron row">
+                                <h5>
+                                    Select&Options(Multiple)
+                                </h5>
+                                <p>
+                                    .form-group>label[for="target"]+div>select.form-control#target[name="NAME"
+                                    <b>multiple="multiple"</b>]>option[value="VALUE$"]*##
+                                </p>
+                            </div>
+                            <div class="form-group row">
+                                <label for="select" class="col-sm-4 text-sm-right">select</label>
+                                <div class="col-sm-8">
+                                    <select name="" id="select" class="form-control" multiple="multiple">
+                                        <option value="1">option1</option>
+                                        <option value="2">option2</option>
+                                        <option value="3">option3</option>
+                                        <option value="4">option4</option>
+                                        <option value="5">option5</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="jumbotron row">
+                                <h5>
+                                    form-control Size
+                                </h5>
+                                <p>
+                                    .form-group>label.text-sm-right[for="target"]{.form-control-sm}+div>input.form-control.form-control-sm#target[type="text"]
+                                </p>
+                            </div>
+                            <div class="form-group row">
+                                <label for="target" class="col-sm-4 text-sm-right">.form-control-sm</label>
+                                <div class="col-sm-8"><input type="text" class="form-control form-control-sm"
+                                        id="target"></div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="target" class="col-sm-4 text-sm-right">Form Control Default</label>
+                                <div class="col-sm-8"><input type="text" class="form-control" id="target"></div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="target" class="col-sm-4 text-sm-right">.form-control-lg</label>
+                                <div class="col-sm-8"><input type="text" class="form-control form-control-lg"
+                                        id="target"></div>
+                            </div>
+                            <hr>
+                            <div class="jumbotron row">
+                                <h5>
+                                    Plaintext(Borderless)
+                                </h5>
+                                <p>
+                                    .form-group>label.text-sm-right[for="target"]{.form-control-plaintext}+div>input.form-control-plaintext.#target[type="text"]
+                                </p>
+                            </div>
+                            <div class="form-group row">
+                                <label for="target" class="col-sm-4 text-sm-right">.form-control-plaintext</label>
+                                <div class="col-sm-8"><input type="text" class="form-control-plaintext" id="target">
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="jumbotron row">
+                                <h5>
+                                    .form-control-range
+                                </h5>
+                                <p>
+                                    .form-group.row>label.col-sm-4.text-sm-right[for="target"]{range}+.col-sm-8>input.form-control-range#target[type="range"]
+                                </p>
+                            </div>
+                            <div class="form-group row">
+                                <label for="target" class="col-sm-4 text-sm-right">range</label>
+                                <div class="col-sm-8"><input type="range" class="form-control-range" id="target"></div>
+                            </div>
+                            <hr>
+                            <div class="jumbotron row">
+                                <h5>
+                                    .form-control-file
+                                </h5>
+                                <p>
+                                    .form-group.row>label.col-sm-4.text-sm-right[for="target"]{file}+.col-sm-8>input.form-control-file#target[type="file"]
+                                </p>
+                                <h5>
+                                    .form-control-file w/ border
+                                </h5>
+                                <p>
+                                    .form-group.row>label.col-sm-4.text-sm-right[for="target"]{file}+.col-sm-8>input.form-control-file<b>.border</b>#target[type="file"]
+                                </p>
+                            </div>
+                            <div class="form-group row">
+                                <label for="target" class="col-sm-4 text-sm-right">File</label>
+                                <div class="col-sm-8"><input type="file" class="form-control-file" id="target"></div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="target" class="col-sm-4 text-sm-right">File</label>
+                                <div class="col-sm-8"><input type="file" class="form-control-file border" id="target">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2"></div>
+        </div>
+    </div>
+</body>
+
+</html>
