@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Deactivate zoom in mobile device -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> -->
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <!-- Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css"
+        integrity="sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt" crossorigin="anonymous">
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/js/bootstrap.min.js"
+        integrity="sha384-3qaqj0lc6sV/qpzrc1N5DC6i1VRn/HyX4qdPaiEFbn54VjQBEU341pvjz7Dv3n6P"
+        crossorigin="anonymous"></script>
+    <style></style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h3>
+                Modal
+            </h3>
+            <p>
+                .modal.fade#modal>.modal-dialog>.modal-content>(.modal-header>h1.modal-title{.modal-title})+(.modal-body>p>lorem)+.modal-footer>button.btn.btn-danger[type="button"
+                data-dismiss="modal"]{Close}
+            </p>
+            <p class="bg-warning">
+            </p>
+        </div>
+        <a href="#modal" class="btn btn-primary" data-toggle="modal">Open Modal</a>
+        <div class="jumbotron">
+            <h3>Opening modal w/ script</h3>
+            <p>
+                function showModal(e) {
+                $("#modal").modal("show");
+                }
+                <br>
+                function hideModal(e){
+                $("#modal").modal("hide");
+                }
+                <br>
+                function toggleModal(e){
+                $("#modal").modal("toggle");
+                }
+                <br>
+                document.getElementById('modal-button').addEventListener('click', showModal);
+            </p>
+        </div>
+        <button id="modal-button" class="btn btn-dark" type="button">Open Modal w/ Script</button>
+        <div class="jumbotron">
+            <h3>Modal Size</h3>
+            <p>
+                .modal-dialog.modal-sm
+            </p>
+            <p>
+                .modal-dialog.modal-lg
+            </p>
+        </div>
+        <a href="#modal-sm" class="btn btn-primary" data-toggle="modal">Open Modal-sm</a>
+        <a href="#modal-lg" class="btn btn-primary" data-toggle="modal">Open Modal-lg</a>
+    </div>
+    <div class="modal fade" id="modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="">.modal-title</h4>
+                    <button class="close" type="button" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        .modal-body. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus culpa
+                        mollitia ut debitis repellat! Non maiores facilis quidem temporibus nobis quo rem facere
+                        voluptatum numquam, vitae recusandae assumenda, ab ratione!
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-danger" type="button" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modal-sm">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title">.modal-title</h1>
+                </div>
+                <div class="modal-body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam nostrum, saepe cum laudantium odit ullam minus optio obcaecati mollitia, nam nesciunt perspiciatis, aliquid culpa placeat quidem doloremque porro! Consequatur, reprehenderit?</p>
+                </div>
+                <div class="modal-footer"><button class="btn btn-danger" type="button" data-dismiss="modal">Close</button></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modal-lg">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title">.modal-title</h1>
+                </div>
+                <div class="modal-body">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis magni possimus tempore ipsum sint non velit dignissimos? Voluptate numquam, similique vel reiciendis nostrum ex quaerat libero iusto dicta quod odit.</p>
+                </div>
+                <div class="modal-footer"><button class="btn btn-danger" type="button" data-dismiss="modal">Close</button></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function showModal(e) {
+            $("#modal").modal("show");
+        }
+        function hideModal(e) {
+            $("#modal").modal("hide");
+        }
+        function toggleModal(e) {
+            $("#modal").modal("toggle");
+        }
+        document.getElementById('modal-button').addEventListener('click', showModal);
+    </script>
+</body>
+
+</html>
